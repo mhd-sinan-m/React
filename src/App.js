@@ -1,21 +1,21 @@
-import React, { Component } from "react"
-//TODO: import logo from './logo.svg';
-import './App.css';
-// import Counter from "./counter";
-import Loop from "./loop"
+import React, { Component } from "react";
+import "./App.css";
+import Todoapp from "./components/Todo";
+import Header from "./components/Header";
+import About from "./components/About";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends Component {
-  state = {
-    a: "counter"
-  }
-
   render() {
     return (
-      <div className="App">
-        {/* <Counter /> */}
-        <Loop />
-      </div>
-    )
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Todoapp />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+    );
   }
 }
 

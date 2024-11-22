@@ -1,0 +1,19 @@
+body {
+  @apply bg-cyan-700 text-cyan-700 w-full ;
+}
+.container {
+  /* transform: translate(-50%,-50%); */
+  @apply text-center w-96 m-auto mt-16;
+}
+.input {
+  @apply text-left rounded-sm placeholder-cyan-700 outline-none;
+}
+.hi > *,
+form {
+  box-shadow: 0 2px 4px rgb(71 85 105 / 10);
+  @apply box-border p-3;
+}
+form,
+.hi > * {
+  @apply bg-cyan-900;
+}
